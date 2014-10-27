@@ -1,0 +1,31 @@
+  <?xml version="1.0" encoding="UTF-8"?>
+   <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    id="org.xalta.echo"
+    version="1.0.2">
+                       <name>Echo</name>
+        <description>Echo Device Plugin</description>
+        <license>Apache 2.0</license>
+        <keywords>cordova,device</keywords>
+               <js-module src="www/echo.js" name="device">
+            <clobbers target="device" />
+        </js-module>
+   <platform name="android">             
+                
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="Echo">
+                <param name="android-package" value="org.xalta.it.echo.Echo"/>
+            </feature>
+        </config-file>
+
+        <source-file src="Echo.java" target-dir="src/org/xalta/echo" />
+             
+
+    <!-- android-specific elements -->
+</platform>
+
+
+
+   
+    </plugin>
+
